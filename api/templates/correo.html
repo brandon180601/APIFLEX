@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registro Exitoso</title>
+    <style>
+        /* Estilos para el correo */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .user-details {
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+
+        .complete-profile-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .complete-profile-button a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>¡Registro Exitoso!</h1>
+        <p>Hola, {{ username }}. Tu registro ha sido exitoso.</p>
+        <div class="user-details">
+            <p>Tu nombre de usuario: <strong>{{ username }}</strong></p>
+            <p>Tu contraseña: <strong>{{ password }}</strong></p>
+        </div>
+        <div class="complete-profile-button">
+            <a href="www.google.com">Completar perfil</a>
+        </div>
+    </div>
+</body>
+
+</html>

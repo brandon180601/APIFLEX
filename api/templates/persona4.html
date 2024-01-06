@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil de Servicios</title>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpndRG8hcPLpCUGqWqkAuXI6B0CsJCsb4&callback=initMap"></script>
+    <!-- Incluye tu archivo JavaScript para el mapa -->
+    <script src="{% static 'js/map2.js' %}"></script>
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f8f8;
+        color: #333;
+      }
+      
+      header {
+        background-color: #ffe033;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      section {
+        padding: 40px;
+        text-align: center;
+      }
+      
+      h1,
+      h2 {
+        color: #ffe033;
+      }
+      
+      .profile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      
+      .profile img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+      }
+      
+      .services {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 30px;
+      }
+      
+      .service {
+        margin: 15px;
+        text-align: center;
+      }
+      
+      .service img {
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+      
+      .reviews {
+        margin-top: 30px;
+      }
+      
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+      }
+      
+      #map-container {
+        width: 80%;
+        margin: 20px auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      
+      #map {
+        height: 400px;
+        width: 100%;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Perfil de Servicios</h1>
+    </header>
+
+    <section>
+      <div class="profile">
+        <img src="{% static 'images/faces/usuario.png' %}" alt="Foto de Perfil" />
+        <h2>Garcia Carrillo Luz Andrea</h2>
+        <p>Cuidadora</p>
+        <p>Horarios Disponibles: L - V / 8:00 a.m. - 10:00 p.m.</p>
+      </div>
+
+      <div class="services">
+        <div class="service">
+          <img src="https://www.quironprevencion.com/blogs/es/prevenidos/empresa-vacunada-empresa-saludable.ficheros/43537-vacunacion848.jpg?width=848&height=418" alt="Trabajo 1" />
+          <p>Colocación de inyección</p>
+        </div>
+        <div class="service">
+          <img src="https://annima.es/wp-content/uploads/2018/07/annima-cuidador-de-personas-mayores-a-domicilio.jpg" alt="Trabajo 2" />
+          <p>Cuidado de personas mayores</p>
+        </div>
+        <div class="service">
+          <img src="https://casasdecuidadodiario.org/es/wp-content/uploads/2020/09/cuidado-de-ninos-y-ninas.jpg" alt="Trabajo 2" />
+          <p>Cuidado de niños</p>
+        </div>
+        <!-- Agrega más servicios según sea necesario -->
+      </div>
+
+      <h4>Mapa de personas</h4>
+      <div id="map-container">
+        <div id="map"></div>
+      </div>
+
+      <div class="reviews">
+        <h2>Opiniones de Clientes</h2>
+        <p>"Muy puntual el trabajador, ademas de que el trabajo es de buena calidad, quede satisfecho con el servicio"</p>
+        <p>"Excelente trabajo, termino rapido con una alta calidad"</p>
+        <!-- Agrega más opiniones según sea necesario -->
+        <br /><br /><br />
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 Tu Empresa - Todos los derechos reservados</p>
+    </footer>
+  </body>
+</html>
